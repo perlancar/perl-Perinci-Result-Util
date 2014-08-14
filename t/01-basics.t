@@ -17,8 +17,11 @@ subtest is_env_res => sub {
     ok(!is_env_res([1.1]), "status not int 2 -> no");
     ok(!is_env_res([-1]), "status negative -> no");
     ok(!is_env_res([1000]), "status too large -> no");
+    ok(!is_env_res([900]), "status too large -> no 2");
+    ok(!is_env_res([90]), "status too small");
 
     ok(!is_env_res([200, []]), "message not string -> no");
+    ok(!is_env_res([200, 200]), "message must contains letters");
 
     ok(!is_env_res([200, "OK", undef, []]), "resmeta not hash -> no");
 
