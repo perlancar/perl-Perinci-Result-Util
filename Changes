@@ -1,5 +1,12 @@
 Revision history for Perinci-Result-Util
 
+0.02     2014-08-16 (SHARYANTO) - Happy 19th CPAN Day!
+
+         - Add some more requirements: status must be 100-599, message must
+           contain letters. This is to avoid false positive like [1,2,3] being
+           classified as an enveloped response.
+
+
 0.01     2014-04-17 (SHARYANTO)
 
          - First release.
